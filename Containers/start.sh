@@ -133,7 +133,7 @@ if ! nc -z 127.0.0.1 10800 2>/dev/null; then
 fi
 
 echo "Starting tun2socks..."
-/tmp/tun2socks/tun2socks -loglevel warning \
+/tmp/tun2socks/tun2socks -loglevel warn \
     -tcp-sndbuf 3m -tcp-rcvbuf 3m \
     -device tun0 \
     -proxy socks5://127.0.0.1:10800 \
